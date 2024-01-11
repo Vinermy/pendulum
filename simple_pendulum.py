@@ -40,8 +40,8 @@ class SimplePendulumSimulation():
 
     def get_weight_coordinates(self) -> list[tuple[float, float]]:
         return [(
-            self.length * sin(theta/2).real * 2 * cos(theta/2).real,
-            self.length * sin(theta/2).real * 2 * sin(theta/2).real
+            self.length * cos(theta - pi/2).real,
+            self.length * sin(theta - pi/2).real,
         ) for theta in self.positions]
 
 
